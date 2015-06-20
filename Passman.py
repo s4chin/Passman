@@ -1,6 +1,5 @@
 import argparse
 import sys
-
 from hashlib import sha256
 
 from config import SECRET_KEY, ALPHABET, SYMBOL
@@ -58,7 +57,7 @@ def password(plaintext, service, length=16, alphabet=ALPHABET):
 def parseargs():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--service', required=True, help="Name of service")
-    parser.add_argument('-p', '--password', required=True, help="Master password")
+    parser.add_argument('-p', '--password', required=True, help="Your Master password")
     parser.add_argument('-l', '--length', type=int, default=16, help="Length of the generated password")
     if len(sys.argv) < 2:
         parser.print_help()
